@@ -13,7 +13,7 @@ This is often referred to as "Creating an API", however there are many component
 
 1. Point your browser to the management portal URL as described in your chosen environment. 
 
-> This URL is based on the [environment](../../../environments/README.md) that you have selected but it will take the form of `http(s)://<host>:<port>/apiplatform`
+> This URL is based on the [environment](../../../../environments/README.md) that you have selected but it will take the form of `http(s)://<host>:<port>/apiplatform`
 
 1.  Log in as a user that has the *API Manager* role.  
 
@@ -36,7 +36,7 @@ Once your API is created, you will see it in the list of APIs.  Go ahead and cli
 On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../../design/design_api) lab.  
 
  
-#### Select and configuration implementation policies
+#### Select the *API Implementation* tab
 
 On the API Implementation tab (left-hand side), you will be presented with a request and a response pipeline.  Beginning with the request pipeline, you will see an *API Request* and a *Service Request*.  
 
