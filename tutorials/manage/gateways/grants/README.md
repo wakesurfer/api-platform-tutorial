@@ -10,7 +10,7 @@ Gateways are where APIs actually run.  Users that have the *GatewayManager* role
 - You have an *API Manager* user who is not presently granted access to the gateway.
 
 ### Optional
-  - To test out the *Deploy to Gateway* or the *Request Deployment to Gateway* grant, you will need an API created.  If you do not already have an API created, you can follow the [Creating an API Policy Implementation](../../manage/apis/create_api) lab to create an API 
+  - To test out the *Deploy to Gateway* or the *Request Deployment to Gateway* grant, you will need an API created.  If you do not already have an API created, you can follow the [Creating an API Policy Implementation](../../apis/create_api) lab to create an API 
 
 ## Concept Check
 1.  Log into your API Platform Management Portal as the user with the *API Manager* role
