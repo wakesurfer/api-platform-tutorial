@@ -45,7 +45,8 @@ Every time you click *Save*, Apiary generates a mock-server based on your design
   5. After the resource executes, scroll down to review the response from the mock server.
   
 #### Extra Credit
-  Use your favorite REST client to call the mock server end-point that displays in the Example and Console windows
+  Use your favorite REST client to call the mock server end-point that displays in the Example and Console windows  
+  _(Postman is a good choice)_
 #### Learn more
 The Apiary Mock Server is a powerful feature that allows your team to test the API design in order to make sure  the correct API is being developed at all times.  Learn more with the following resource(s):
   * [Mock Server](https://help.apiary.io/tools/mock-server/)
