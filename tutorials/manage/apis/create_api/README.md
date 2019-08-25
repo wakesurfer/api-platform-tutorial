@@ -29,7 +29,7 @@ This is often referred to as "Creating an API", however there are many component
 
 Once your API is created, you will see it in the list of APIs.  Go ahead and click on the API name to continue editing it.
 
-#### Select the specification
+#### Select the [Specification] tab
 
 > Note: If you are using the *Apiary Free* plan, this option won't be available to you.  An API to be linked to the implementation must belong to a team.  If your API is not owned by a team in Apiary, then you can skip this step.
 
