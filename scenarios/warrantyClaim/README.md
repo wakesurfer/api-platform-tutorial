@@ -319,10 +319,9 @@ Now, let's try calling a different resource
 In your REST client, replace *tickets* with *partners* in your URL and send the request again. 
 
 If you configured your Interface Filtering policy, you should have received the following:
-The request is rejected with a *Method not allowed* message. Why? Because of the interface filtering policy, requests to this resource are rejected. The policy rejects requests to any resource other than /tickets*. This is designed to protect the underlying API from callers trying to call resources you don’t intend to expose.
-
-### Publish the API
-Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish your API
+The request is rejected with a *Method not allowed* message. Why? Because of the interface filtering policy, requests to this resource are rejected. The policy rejects requests to any resource other than /tickets\*. This is designed to protect the underlying API from callers trying to call resources you don’t intend to expose.  
+### Publish the API  
+Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish your API  
 
 - When selecting your end-point, be aware if you are using a shared environment, you may need to modify it to keep it unique.
 
@@ -395,6 +394,8 @@ When you select an API from the API Catalog, its API Portal details page appears
 The Documentation tab embeds the documentation reference you specified on the General Settings tab when you created the API. Depending on how you configured this, the documentation appears inside a frame as a website, as text, or the documentation on Apiary.
 
 ### Connect your API to the actual REST back-end service
+Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.
+
 Up until now, your API has simply invoked the mock-service, but now it is time to connect it to the actual REST back-end service.  Here you have a few options.
 
 1. If you are using the *Demo/Training Environment* then you can simply use the existing *ServiceTicketImpl* service.
