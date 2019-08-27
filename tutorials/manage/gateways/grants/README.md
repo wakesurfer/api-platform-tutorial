@@ -5,12 +5,12 @@ Gateways are where APIs actually run.  Users that have the *GatewayManager* role
 > Note: If you are using a shared environment and/or tenant then you may neither have the necessary grant(s) on any of the gateway(s).  If you do not have the appropriate grants, then contact the administrator, or select one of the environment options where you are the administrator.
 
 ### Required
-- You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
+- You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 - Your environment has at least one gateway deployed and your user has *Manage Gateway* grant.
 - You have an *API Manager* user who is not presently granted access to the gateway.
 
 ### Optional
-  - To test out the *Deploy to Gateway* or the *Request Deployment to Gateway* grant, you will need an API created.  If you do not already have an API created, you can follow the [Creating an API Policy Implementation](../../manage/create_api) lab to create an API 
+  - To test out the *Deploy to Gateway* or the *Request Deployment to Gateway* grant, you will need an API created.  If you do not already have an API created, you can follow the [Creating an API Policy Implementation](../../apis/create_api) lab to create an API 
 
 ## Concept Check
 1.  Log into your API Platform Management Portal as the user with the *API Manager* role
@@ -20,7 +20,7 @@ Gateways are where APIs actually run.  Users that have the *GatewayManager* role
   - If you do not see *Gateways*, does that mean they do not exist?
 
 ## Issuing Gateway Grants
-1. Log into API Platform as a user with the *GatewayManager* role.  See [environments](../../../environments/README.md)
+1. Log into API Platform as a user with the *GatewayManager* role.  See [environments](../../../../environments/README.md)
 1. Select the Development Gateway (or whatever gateway you have deployed)
 1. Click the *Grants* tab
 1. Take a moment to review all of the grants.  For each grant, click on the header-tab to view the list of users who are assigned that grant
@@ -75,4 +75,4 @@ Depending on your environment, you may encounter a different result
   - Expand the failed request to see the error
 
 ## Learn more
-To learn more about API Gateway Grants, read [Managing Gateway Grants](https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/managing-gateway-grants.html)
+To learn more about API Gateway Grants, read [Managing Gateway Grants](https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/manage-gateway-grants.html#GUID-878CE9C6-38F2-4C43-BA29-DEE39AF7A4E3)
