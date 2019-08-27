@@ -394,7 +394,8 @@ When you select an API from the API Catalog, its API Portal details page appears
 The Documentation tab embeds the documentation reference you specified on the General Settings tab when you created the API. Depending on how you configured this, the documentation appears inside a frame as a website, as text, or the documentation on Apiary.
 
 ### Connect your API to the actual REST back-end service
-Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.
+**Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.
+You can skip to Activate Draft Policies below.**
 
 Up until now, your API has simply invoked the mock-service, but now it is time to connect it to the actual REST back-end service.  Here you have a few options.
 
