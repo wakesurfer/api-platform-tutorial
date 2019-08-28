@@ -395,7 +395,7 @@ The Documentation tab embeds the documentation reference you specified on the Ge
 
 ### ~~Connect your API to the actual REST back-end service~~
 **Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.  
-You can skip to Activate Draft Policies below.**
+Skip to [Activate Draft Policies](#activate-draft-policies) below.**
 
 Up until now, your API has simply invoked the mock-service, but now it is time to connect it to the actual REST back-end service.  Here you have a few options.
 
