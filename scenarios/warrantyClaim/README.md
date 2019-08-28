@@ -394,7 +394,7 @@ When you select an API from the API Catalog, its API Portal details page appears
 The Documentation tab embeds the documentation reference you specified on the General Settings tab when you created the API. Depending on how you configured this, the documentation appears inside a frame as a website, as text, or the documentation on Apiary.
 
 ### ~~Connect your API to the actual REST back-end service~~
-**Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.  
+**Actually we will continue using the mock servers implementation to keep things simple. 
 Skip to [Activate Draft Policies](#activate-draft-policies) below.**
 
 Up until now, your API has simply invoked the mock-service, but now it is time to connect it to the actual REST back-end service.  Here you have a few options.
@@ -421,7 +421,7 @@ It is a good idea once your API is re-deployed to invoke it so you can confirm t
 Now that you have confirmed everything is working, Return to your API Implementation, edit the draft policies and save them.  Then save your API.
 
 ### Re-deploy your API
-You need to re-deploy your API to activate the key validation and application rate limiting policies you just added.  Visit [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a refresher.
+You need to re-deploy your API to activate the key validation and application rate limiting policies you just added.  Visit [Deploying an API](../../tutorials/manage/apis/deploy_api#deploying-an-api) if you need a refresher.
 
 ### Invoke your API 
 Now that you have successfully created an application and gathered your app keys, you’ll send requests to the API to ensure the policies work as intended.
@@ -544,4 +544,4 @@ Throughout this scenario, you learned how to:
 Congratulations on finishing this part of the lab!  Now let’s go have some fun!
 
 ## Extras
-We encourage you to keep learning!  Visit the [tutorials](../../tutorials) to discover what other exercises you can try out!
+We encourage you to keep learning!  Visit the [tutorials](../../tutorials#api-platform-tutorials) to discover what other exercises you can try out!
