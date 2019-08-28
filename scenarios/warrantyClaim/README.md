@@ -332,9 +332,9 @@ API Plans represent the intersection of APIs and Applications.  Both the API and
 
 Before we can entitle an API, we need the *Service Manager* to create the plan.
 
-> Note: If you are using the *Demo/Training* environment, you can skip this step and just choose *Developer Plan* when you entitle the API.  You of course can create your own plan, but you would need to make sure you provide the sequence like you do with API names, etc.
+> Note: If you are using the *Demo/Training* environment, you can skip this step and just choose *Developer Plan* when you entitle the API.  You can of course create your own plan, but you would need to make sure you provide the sequence like you do with API names, etc.
 
-Follow [Creating a Plan](../../tutorials/manage/plans/create_plan) to create a new Plan for your APIs.
+Follow [Creating a Plan](../../tutorials/manage/plans/create_plan#creating-a-plan) to create a new Plan for your APIs.
 
 ### Entitle the API to a plan
 When you added the *Key Validation* policy (in draft), you completed the initial step to control access to the API by requiring application(s) to be entitled to call the API.  Later, you will activate that policy requiring your consumers identify their calls with a registered application in order to call your API.  That API must be entitled with a plan and the application will also be entitled with to a plan that entitles the API.  The the association of Applications to APIs are accomplished through plans.
