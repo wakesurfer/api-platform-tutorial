@@ -43,14 +43,14 @@ As you progress through this use-case, you will need to gain access to Oracle AP
 ### Choose your Environment
 If you are in an instructor-led event, your instructor may guide you on what environment you are using.  If you are accessing this on your own, you will need to make the choice.
 
-To learn more about the available environments, visit [API Platform Demo Environments](../../environments/README.md)
+To learn more about the available environments, visit [API Platform Demo Environments](../../environments/README.md#environments)
 
 >Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
 
 ### Design the API
 Design is critical as a first step for great APIs.  Collaboration ensures that we are creating the correct design.  We need our API to be well documented and we need to create a mock service in order to rapidly prototype our API
-- Follow the [Designing an API](../../tutorials/design/design_api) tutorial, to Design your API
+- Follow the [Designing an API](../../tutorials/design/design_api#designing-an-api) tutorial, to Design your API
 
 Now you have an API Design that all of your stakeholders clearly understand and have agreed to.  Your engineering teams can leverage the mock service as they develop their respective components.  You know that this will ultimately be made available to partners, so you want to get started on the policy enforcement implementation
 
@@ -58,14 +58,14 @@ Now you have an API Design that all of your stakeholders clearly understand and 
 A great API extends beyond just a simple REST service by providing a managed end-point for only approved users to gain access under a proper SLA.  To create this managed end-point, we will begin with creating an API Policy Implementation
 
 
-- Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api) tutorial to create your API.  
+- Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api#creating-an-api-policy-implementation) tutorial to create your API.  
 
 >Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
 At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The *proxy pattern* is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
 
-- Follow the [Deploying an API](../../tutorials/manage/apis/deploy_api) tutorial to deploy your API
-  - Be aware that you may need to apply certain grant(s) to your gateway.  If so, follow the [Managing Access Grants on Gateways](../../tutorials/manage/gateways/grants)
+- Follow the [Deploying an API](../../tutorials/manage/apis/deploy_api#deploying-an-api) tutorial to deploy your API
+  - Be aware that you may need to apply certain grant(s) to your gateway.  If so, follow the [Managing Access Grants on Gateways](../../tutorials/manage/gateways/grants#granting-access-to-gateways)
 
 
 Depending on your needs, an API manager can create the API Implementations and another person will handle the deployment to a gateway.  This makes the most sense in the case of a production gateway where you want to restrict access to deployments.
@@ -77,12 +77,12 @@ Perhaps you may want to begin with a basic implementation so your front-end deve
 #### Test the API
 Now that the API is deployed, you can invoke in to test if everything works as expected.
 
-See [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) if you need help on how to invoke an API
+See [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md#invoke-an-api) if you need help on how to invoke an API
 
 ##### Invoke the API
 Choose your favorite REST client.  For this exercise, you could simply use a web-browser because it is a simple _GET_ request. 
 
-- Use *Load Balancer URL* (see [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) for how to get the Load Balancer URL if you don't already know how to do this)
+- Use *Load Balancer URL* (see [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md#invoke-an-api) for how to get the Load Balancer URL if you don't already know how to do this)
   - _Example: http://`<host>`:`<port>`/ticketService/1/tickets_
 - Verb: GET
 - Headers (optional):
@@ -271,7 +271,7 @@ Sometimes we need to make sure the request contains a certain header, or ensure 
 Take a moment to review your implementation so far.  Notice the difference between the *Key Validation*, *Application Rate Limiting* and *Header Validation* policies in your API?  The first two should have a dotted line indicating that they are saved as draft.
 
 ###### Extra Credit
-Go ahead and re-deploy your API.  Follow [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a reminder of how to do this.  Once deployed, or requesting deployment, look at the API Deployment from the gateway perspective.  Expand the API deployment.  Do you see the policies that are in draft?
+Go ahead and re-deploy your API.  Follow [Deploying an API](../../tutorials/manage/apis/deploy_api#deploying-an-api) if you need a reminder of how to do this.  Once deployed, or requesting deployment, look at the API Deployment from the gateway perspective.  Expand the API deployment.  Do you see the policies that are in draft?
  
 ##### Interface Filtering
 Apply the *Interface Filtering* policy, which is used to filter requests based on the resources and methods specified in the request. Here, you’ll configure this policy to pass GET requests to one resource, /tickets (which returns all tickets) but reject any other type of request.
@@ -302,7 +302,7 @@ Add the groovy policy as follows:
   
 Go ahead and re-deploy your API with your new changes.
 
-### Invoke the API
+### Invoke the API to verify your changes
 Now that you have successfully added policies to your API, you can send requests to ensure the policies work as intended.  You have already invoked your API, so return to your favorite REST client and invoke the API again.  You can revisit the [Invoke the API](#invoke-the-api) portion of this lab.
   
 This time when you invoke the API, the request is rejected with a _Bad Request_ message. Why? Because of the header validation policy, you need to include a tenant-id header with a value of 1 or greater.
@@ -321,7 +321,7 @@ In your REST client, replace *tickets* with *partners* in your URL and send the 
 If you configured your Interface Filtering policy, you should have received the following:
 The request is rejected with a *Method not allowed* message. Why? Because of the interface filtering policy, requests to this resource are rejected. The policy rejects requests to any resource other than /tickets\*. This is designed to protect the underlying API from callers trying to call resources you don’t intend to expose.  
 ### Publish the API  
-Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish your API  
+Follow [Publishing an API](../../tutorials/manage/apis/publish_api#publishing-an-api) to publish your API  
 
 - When selecting your end-point, be aware if you are using a shared environment, you may need to modify it to keep it unique.
 
@@ -347,7 +347,7 @@ Entitling applications to call APIs, requires two primary tasks.
 1. Create an (or select an existing) application and entitle that application to the plan
   - As an *API Manager* or an *App Developer* you can create applications.
   
-Follow [Entitle an API to a Plan](../../tutorials/manage/apis/entitle_api) to entitle your API to *DeveloperPlan*
+Follow [Entitle an API to a Plan](../../tutorials/manage/apis/entitle_api#entitle-an-api-to-a-plan) to entitle your API to *DeveloperPlan*
 
 #### Register App
 As the *API Manager*, select the *Applications* menu.
@@ -378,7 +378,7 @@ You can search for an API by entering keywords in the field at the top of the ca
 In this task you sign in as Application Developer User from the previous section. You granted this user the Application Developer role, meaning they are able to view APIs in the catalog and register them to applications without requesting approval.
 
 To log in as Application Developer User:
-- In an incognito window, a private browser session, or an entirely different browser, navigate to the developer portal for your [environment](../../environments) This is the Developer Portal UI. You use incognito mode as the session persists between the Management Portal and the Developer Portal if you use the same browser session.
+- In an incognito window, a private browser session, or an entirely different browser, navigate to the developer portal for your [environment](../../environments#environments) This is the Developer Portal UI. You use incognito mode as the session persists between the Management Portal and the Developer Portal if you use the same browser session.
 
 Only APIs that have been published appear in the catalog. If you have not published your API, see [Publish the API](#publish-the-api): To view an API, the Application Developer must also have the View API Details grant or another grant that implies these privileges.
  
@@ -393,7 +393,7 @@ When you select an API from the API Catalog, its API Portal details page appears
 - API Portal Documentation (informational--no activity in this section)
 The Documentation tab embeds the documentation reference you specified on the General Settings tab when you created the API. Depending on how you configured this, the documentation appears inside a frame as a website, as text, or the documentation on Apiary.
 
-### Connect your API to the actual REST back-end service
+### ~~Connect your API to the actual REST back-end service~~
 **Actually we will continue using the mock servers implementation to keep things simple. Continue following the instructions but **skip** the creating a service parts.  
 You can skip to Activate Draft Policies below.**
 
